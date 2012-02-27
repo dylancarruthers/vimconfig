@@ -1,0 +1,21 @@
+§
+§ =============================================================
+§ ========== USER MACROS ======================================
+§ =============================================================
+§
+|AUTHOR|    = Dylan Carruthers
+|AUTHORREF| = dylanc
+|EMAIL|     = dylanc@reivernet.com
+|COMPANY|   = ReiverNet Ltd
+|COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|; All Rights Reserved.
+§
+§ =============================================================
+§ ========== FILE INCLUDES ====================================
+§ =============================================================
+§
+|includefile| = comments.template
+|includefile| = statements.template
+|includefile| = idioms.template
+|includefile| = pod.template
+§
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

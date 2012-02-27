@@ -1,0 +1,2 @@
+supertab.vba: call delete('/Users/dylancarruthers/.vim/doc/supertab.txt')|call delete('/Users/dylancarruthers/.vim/plugin/supertab.vim')
+tagbar.vmb: call delete('/Users/dylancarruthers/.vim/autoload/tagbar.vim')|call delete('/Users/dylancarruthers/.vim/doc/tagbar.txt')|call delete('/Users/dylancarruthers/.vim/plugin/tagbar.vim')|call delete('/Users/dylancarruthers/.vim/syntax/tagbar.vim')
