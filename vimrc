@@ -45,7 +45,6 @@ nmap <silent> <leader>n :silent :nohlsearch<CR> " Take away the highlights on se
 
 set shortmess=atI               " shortens command line prompts
 
-set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
 let g:Powerline_symbols = 'fancy'
