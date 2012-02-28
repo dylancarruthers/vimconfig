@@ -29,6 +29,25 @@ set mousefocus                  " Allow the mouse to control focus in MacVIM
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
+set hidden                      " Don't prompt to write
+
+set history=1000
+
+runtime macros/matchit.vim      " Better switching
+
+set wildmenu                    " pressing tab doesn't loop around but gives an idea of how many
+
+set title                       " For ssh-windows
+
+set scrolloff=3                 " Buffer when scrolling
+
+nmap <silent> <leader>n :silent :nohlsearch<CR> " Take away the highlights on searches
+
+set shortmess=atI               " shortens command line prompts
+
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
 let g:Powerline_symbols = 'fancy'
 
 colorscheme synic
