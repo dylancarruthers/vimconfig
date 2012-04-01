@@ -9,6 +9,9 @@ scriptencoding=latin1
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
+""This unsets the "last search pattern" register by hitting return
+nnoremap\ :noh<CR>
+
 set ruler                       " Add location status bar
 set number                      " Add line numbers
 set t_Co=256                    " Set the number of colours to 256
@@ -49,6 +52,11 @@ nmap <silent> <leader>s :set nolist!<CR>
 
 let g:Powerline_symbols = 'fancy'
 
+if has('gui_running')
+  set background=light
+else 
+  set background=dark
+endif
 colorscheme synic
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
