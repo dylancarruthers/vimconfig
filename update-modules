@@ -1,4 +1,17 @@
 #!/bin/sh
 
+echo " ===== pathogen ===== "
 curl -so ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+echo
+
+cd bundle
+for i in `ls`
+do 
+  echo " ===== $i ===== "
+  cd $i
+  git pull
+  cd ..
+  echo
+done
+cd ..
