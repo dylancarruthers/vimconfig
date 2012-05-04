@@ -65,7 +65,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 :command! W w !sudo tee % > /dev/null
 
 "" Check the current php file for syntax errors
-map <C-B> :!php -l %<CR>
+map <C-P> :!php -l %<CR>
 nmap <F8> :TagbarToggle<CR> 
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
