@@ -25,10 +25,12 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
+set showmatch                   " highlights all the matches
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 set mousefocus                  " Allow the mouse to control focus in MacVIM
+set cursorline                  " Highlight the current line
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
@@ -44,6 +46,12 @@ set title                       " For ssh-windows
 
 set scrolloff=3                 " Buffer when scrolling
 
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+map N Nzz
+map n nzz
+
+
 nmap <silent> <leader>n :silent :nohlsearch<CR> " Take away the highlights on searches
 
 set shortmess=atI               " shortens command line prompts
@@ -57,7 +65,7 @@ if has('gui_running')
 else 
   set background=dark
 endif
-colorscheme synic
+colorscheme badwolf
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
