@@ -30,7 +30,6 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 set mousefocus                  " Allow the mouse to control focus in MacVIM
-set cursorline                  " Highlight the current line
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
@@ -65,7 +64,7 @@ if has('gui_running')
 else 
   set background=dark
 endif
-colorscheme badwolf
+colorscheme synic
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
