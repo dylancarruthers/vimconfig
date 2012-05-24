@@ -50,6 +50,7 @@ set scrolloff=3                 " Buffer when scrolling
 map N Nzz
 map n nzz
 
+set tags=./tags
 
 nmap <silent> <leader>n :silent :nohlsearch<CR> " Take away the highlights on searches
 
