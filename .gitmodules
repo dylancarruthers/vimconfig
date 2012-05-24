@@ -13,3 +13,9 @@
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "codepath.vim"]
+	path = codepath.vim
+	url = git://github.com/lucapette/codepath.vim.git
+[submodule "tabular"]
+	path = tabular
+	url = git://github.com/godlygeek/tabular.git
