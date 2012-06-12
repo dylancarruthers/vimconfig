@@ -65,7 +65,7 @@ if has('gui_running')
 else 
   set background=dark
 endif
-colorscheme synic
+colorscheme wombat256mod 
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
