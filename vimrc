@@ -2,10 +2,10 @@ call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-set nocompatible
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show unicode glyphs
 syntax enable
-set encoding=utf-8
-scriptencoding=latin1
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
@@ -65,7 +65,8 @@ if has('gui_running')
 else 
   set background=dark
 endif
-colorscheme wombat256mod 
+"" colorscheme wombat256mod 
+colorscheme synic 
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
