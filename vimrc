@@ -1,8 +1,22 @@
-call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 set nocompatible   " Disable vi-compatibility
+
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'majutsushi/tagbar.git'
+Bundle 'sjl/badwolf.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'lucapette/codepath.vim.git'
+Bundle 'godlygeek/tabular.git'
+
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 syntax enable
