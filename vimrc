@@ -16,6 +16,7 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'lucapette/codepath.vim.git'
 Bundle 'godlygeek/tabular.git'
+Bundle 'walm/jshint.vim.git'
 
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
