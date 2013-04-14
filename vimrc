@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'lucapette/codepath.vim.git'
 Bundle 'godlygeek/tabular.git'
 Bundle 'walm/jshint.vim.git'
+Bundle 'terryma/vim-multiple-cursors.git'
 
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
