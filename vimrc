@@ -17,7 +17,14 @@ Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'lucapette/codepath.vim.git'
 Bundle 'godlygeek/tabular.git'
 Bundle 'walm/jshint.vim.git'
-Bundle 'terryma/vim-multiple-cursors.git'
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
 
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
