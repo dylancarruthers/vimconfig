@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'lucapette/codepath.vim.git'
 Bundle 'godlygeek/tabular.git'
 Bundle 'walm/jshint.vim.git'
+Bundle 'mhinz/vim-startify.git'
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
