@@ -14,7 +14,6 @@ Bundle 'sjl/badwolf.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'godlygeek/tabular.git'
 Bundle 'walm/jshint.vim.git'
 Bundle 'mhinz/vim-startify.git'
 
@@ -52,7 +51,7 @@ set showmatch                   " highlights all the matches
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-set mousefocus                  " Allow the mouse to control focus in MacVIM
+set mouse=r
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
@@ -84,7 +83,7 @@ if has("autocmd")
 
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType python setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
   " Customisations based on house-style (arbitrary)
@@ -95,6 +94,8 @@ if has("autocmd")
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 endif
+
+let python_highlight_all=1
 
 set shortmess=atI               " shortens command line prompts
 
@@ -109,6 +110,7 @@ else
 endif
 "" colorscheme wombat256mod 
 colorscheme synic 
+"" colorscheme solarized
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
@@ -122,3 +124,4 @@ nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 map - <C-W>- 
 map + <C-W>+
+
