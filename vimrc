@@ -35,7 +35,7 @@ filetype plugin indent on       " load file type plugins + indentation
 nnoremap\ :noh<CR>
 
 set ruler                       " Add location status bar
-set number                      " Add line numbers
+"set number                      " Add line numbers
 set t_Co=256                    " Set the number of colours to 256
 
 "" Whitespace
