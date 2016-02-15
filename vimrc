@@ -35,12 +35,12 @@ filetype plugin indent on       " load file type plugins + indentation
 nnoremap\ :noh<CR>
 
 set ruler                       " Add location status bar
-"set number                      " Add line numbers
+set nonumber                      " Add line numbers
 set t_Co=256                    " Set the number of colours to 256
 
 "" Whitespace
 set wrapscan                    " Wrap lines on whole words
-set tabstop=2 shiftwidth=2      " a tab is two spaces
+set tabstop=4 shiftwidth=4      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -50,8 +50,6 @@ set incsearch                   " incremental searching
 set showmatch                   " highlights all the matches
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
-
-set mouse=r
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
@@ -109,7 +107,8 @@ else
   set background=dark
 endif
 "" colorscheme wombat256mod 
-colorscheme synic 
+let g:sierra_Twilight = 1
+colorscheme sierra 
 "" colorscheme solarized
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -124,4 +123,8 @@ nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 map - <C-W>- 
 map + <C-W>+
+let mapleader = "\<Space>"
+
+set mouse=
+set nonumber                      " Add line numbers
 
