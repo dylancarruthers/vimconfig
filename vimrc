@@ -108,7 +108,7 @@ else
 endif
 "" colorscheme wombat256mod 
 let g:sierra_Twilight = 1
-colorscheme sierra 
+colorscheme synic
 "" colorscheme solarized
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
