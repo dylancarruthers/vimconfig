@@ -16,6 +16,7 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'walm/jshint.vim.git'
 Bundle 'mhinz/vim-startify.git'
+Bundle 'robertmeta/nofrils.git'
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -107,9 +108,11 @@ else
   set background=dark
 endif
 "" colorscheme wombat256mod 
-let g:sierra_Twilight = 1
-colorscheme synic
+"" colorscheme synic
+"" let g:sierra_Twilight = 1
 "" colorscheme solarized
+let g:nofrils_strbackgrounds=1
+colorscheme nofrils-dark
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
