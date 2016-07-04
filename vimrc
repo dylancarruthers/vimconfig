@@ -16,7 +16,6 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'walm/jshint.vim.git'
 Bundle 'mhinz/vim-startify.git'
-Bundle 'robertmeta/nofrils.git'
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -71,8 +70,6 @@ set scrolloff=3                 " Buffer when scrolling
 map N Nzz
 map n nzz
 
-set tags=./tags
-
 nmap <silent> <leader>n :silent :nohlsearch<CR> " Take away the highlights on searches
 
 " Only do this part when compiled with support for autocommands
@@ -108,11 +105,11 @@ else
   set background=dark
 endif
 "" colorscheme wombat256mod 
-"" colorscheme synic
+colorscheme synic
 "" let g:sierra_Twilight = 1
 "" colorscheme solarized
-let g:nofrils_strbackgrounds=1
-colorscheme nofrils-dark
+"" let g:nofrils_strbackgrounds=1
+"" colorscheme nofrils-dark
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
@@ -121,7 +118,6 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "" Check the current php file for syntax errors
 map <C-P> :!php -l %<CR>
-nmap <F8> :TagbarToggle<CR> 
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 map - <C-W>- 
