@@ -31,6 +31,38 @@ syntax enable
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
+augroup configgroup
+    autocmd!
+    autocmd VimEnter * highlight clear SignColumn
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+                \:call <SID>StripTrailingWhitespaces()
+    autocmd FileType java setlocal noexpandtab
+    autocmd FileType java setlocal list
+    autocmd FileType java setlocal listchars=tab:+\ ,eol:-
+    autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType php setlocal expandtab
+    autocmd FileType php setlocal list
+    autocmd FileType php setlocal listchars=tab:+\ ,eol:-
+    autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType ruby setlocal tabstop=2
+    autocmd FileType ruby setlocal shiftwidth=2
+    autocmd FileType ruby setlocal softtabstop=2
+    autocmd FileType ruby setlocal commentstring=#\ %s
+    autocmd FileType python setlocal commentstring=#\ %s
+    autocmd BufEnter *.cls setlocal filetype=java
+    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+    autocmd BufEnter Makefile setlocal noexpandtab
+    autocmd BufEnter *.sh setlocal tabstop=2
+    autocmd BufEnter *.sh setlocal shiftwidth=2
+    autocmd BufEnter *.sh setlocal softtabstop=2
+augroup END
+
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
 ""This unsets the "last search pattern" register by hitting return
 nnoremap\ :noh<CR>
 
@@ -43,6 +75,7 @@ set wrapscan                    " Wrap lines on whole words
 set tabstop=4 shiftwidth=4      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
+set cursorline
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -50,6 +83,7 @@ set incsearch                   " incremental searching
 set showmatch                   " highlights all the matches
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+set cursorline                  " highlight current line
 
 set wmh=0                       " Stop showing a single line when window is minimized
 
@@ -60,6 +94,8 @@ set history=1000
 runtime macros/matchit.vim      " Better switching
 
 set wildmenu                    " pressing tab doesn't loop around but gives an idea of how many
+
+set lazyredraw          " redraw only when we need to.
 
 set title                       " For ssh-windows
 
@@ -80,11 +116,12 @@ if has("autocmd")
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
 
   " Customisations based on house-style (arbitrary)
-  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 
   " Treat .rss files as XML
@@ -97,7 +134,7 @@ set shortmess=atI               " shortens command line prompts
 
 nmap <silent> <leader>s :set nolist!<CR>
 
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols='fancy'
 
 if has('gui_running')
   set background=light
@@ -105,7 +142,8 @@ else
   set background=dark
 endif
 "" colorscheme wombat256mod 
-colorscheme synic
+"" colorscheme synic
+colorscheme badwolf
 "" let g:sierra_Twilight = 1
 "" colorscheme solarized
 "" let g:nofrils_strbackgrounds=1
