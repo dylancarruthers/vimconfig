@@ -52,9 +52,9 @@ augroup configgroup
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal tabstop=2
-    autocmd BufEnter *.sh setlocal shiftwidth=2
-    autocmd BufEnter *.sh setlocal softtabstop=2
+    autocmd BufEnter *.sh setlocal tabstop=4
+    autocmd BufEnter *.sh setlocal shiftwidth=4
+    autocmd BufEnter *.sh setlocal softtabstop=4
 augroup END
 
 set backup
