@@ -3,19 +3,16 @@ set nocompatible   " Disable vi-compatibility
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-Bundle 'majutsushi/tagbar.git'
-Bundle 'sjl/badwolf.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'walm/jshint.vim.git'
-Bundle 'mhinz/vim-startify.git'
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'majutsushi/tagbar.git'
+Plugin 'sjl/badwolf.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'powerline/powerline.git'
+Plugin 'walm/jshint.vim.git'
+Plugin 'mhinz/vim-startify.git'
+call vundle#end()
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -69,6 +66,9 @@ nnoremap\ :noh<CR>
 set ruler                       " Add location status bar
 set nonumber                      " Add line numbers
 set t_Co=256                    " Set the number of colours to 256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
 "" Whitespace
 set wrapscan                    " Wrap lines on whole words
