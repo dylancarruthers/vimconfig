@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'powerline/powerline.git'
 Plugin 'walm/jshint.vim.git'
 Plugin 'mhinz/vim-startify.git'
+Plugin 'pearofducks/ansible-vim'
 call vundle#end()
 
 nnoremap <C-J> <C-W><C-J>
